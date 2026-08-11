@@ -1,15 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f3efe5;
+  --background: #f8fafc;
   --foreground: #0f172a;
+  --primary: #0d9488;
+  --primary-dark: #0f766e;
+  --accent: #f59e0b;
+  --muted: #64748b;
+  --border: #e2e8f0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
   --font-sans: var(--font-manrope);
   --font-display: var(--font-space-grotesk);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -24,88 +37,116 @@ body {
   font-family: var(--font-space-grotesk), sans-serif;
 }
 
-.aurora {
-  position: absolute;
-  inset: -15% -5% auto;
-  height: 580px;
-  background:
-    radial-gradient(55% 60% at 15% 20%, rgba(245, 158, 11, 0.45), transparent),
-    radial-gradient(45% 50% at 85% 30%, rgba(14, 165, 233, 0.4), transparent),
-    radial-gradient(35% 40% at 55% 65%, rgba(251, 113, 133, 0.25), transparent);
-  filter: blur(22px);
-  pointer-events: none;
-  z-index: -1;
-  animation: auroraDrift 12s ease-in-out infinite alternate;
+/* Subtle dot grid — CareerZenith-style depth without noise */
+.bg-grid {
+  background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
-.score-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid rgb(203 213 225 / 0.8);
-  background: rgb(255 255 255 / 0.7);
-  border-radius: 0.9rem;
-  padding: 0.8rem 0.9rem;
-  font-size: 0.9rem;
-  color: rgb(51 65 85);
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.score-card strong {
-  font-family: var(--font-space-grotesk), sans-serif;
-  color: rgb(2 6 23);
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
-.milestone-item {
-  border: 1px solid rgb(226 232 240);
-  border-radius: 0.9rem;
-  background: white;
-  padding: 1rem;
+.reveal-delay-1 {
+  transition-delay: 0.1s;
 }
 
-.milestone-day {
-  font-family: var(--font-space-grotesk), sans-serif;
-  color: rgb(217 119 6);
-  letter-spacing: 0.08em;
-  font-size: 0.78rem;
-  text-transform: uppercase;
+.reveal-delay-2 {
+  transition-delay: 0.2s;
 }
 
-.milestone-title {
-  margin-top: 0.35rem;
-  font-weight: 700;
-  color: rgb(15 23 42);
+.reveal-delay-3 {
+  transition-delay: 0.3s;
 }
 
-.reveal-up,
-.reveal-up-delay,
-.reveal-up-delay-2 {
-  animation: revealUp 0.8s ease-out both;
-}
-
-.reveal-up-delay {
-  animation-delay: 0.16s;
-}
-
-.reveal-up-delay-2 {
-  animation-delay: 0.32s;
-}
-
-@keyframes revealUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 22px, 0);
+/* Logo marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
   }
-  to {
-    opacity: 1;
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 28s linear infinite;
+}
+
+/* Hero mockup float */
+@keyframes floaty {
+  0%,
+  100% {
     transform: translate3d(0, 0, 0);
   }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
 }
 
-@keyframes auroraDrift {
-  from {
-    transform: translate3d(-1.2%, -0.5%, 0) scale(1);
+.animate-floaty {
+  animation: floaty 5s ease-in-out infinite;
+}
+
+/* AI typing dots */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0.25;
   }
-  to {
-    transform: translate3d(1.2%, 0.8%, 0) scale(1.03);
+  50% {
+    opacity: 1;
   }
+}
+
+.typing-dot {
+  animation: blink 1.2s ease-in-out infinite;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Card hover — restrained, not flashy */
+.card-hover {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 24px -4px rgb(15 23 42 / 0.08);
+}
+
+/* Testimonial carousel */
+@keyframes testimonial-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.testimonial-track {
+  animation: testimonial-marquee 45s linear infinite;
+}
+
+.testimonial-track:hover {
+  animation-play-state: paused;
 }

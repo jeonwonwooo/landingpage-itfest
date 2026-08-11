@@ -13,14 +13,15 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "ITFest Landing Challenge",
-  description: "Landing page kompetisi dengan Next.js + Tailwind CSS, siap deploy ke Vercel.",
+  title: "Karierku — CV ATS-Friendly, LinkedIn & Portofolio dengan AI",
+  description:
+    "Platform all-in-one untuk mahasiswa & fresh graduate. Buat CV ATS-friendly, optimalkan LinkedIn, dan bangun portofolio profesional dengan bantuan AI.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="id"
       className={`${manrope.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
