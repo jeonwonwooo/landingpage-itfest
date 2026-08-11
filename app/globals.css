@@ -1,26 +1,111 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f3efe5;
+  --foreground: #0f172a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-space-grotesk);
 }
 
 body {
+  margin: 0;
+  min-height: 100vh;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope), sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+.aurora {
+  position: absolute;
+  inset: -15% -5% auto;
+  height: 580px;
+  background:
+    radial-gradient(55% 60% at 15% 20%, rgba(245, 158, 11, 0.45), transparent),
+    radial-gradient(45% 50% at 85% 30%, rgba(14, 165, 233, 0.4), transparent),
+    radial-gradient(35% 40% at 55% 65%, rgba(251, 113, 133, 0.25), transparent);
+  filter: blur(22px);
+  pointer-events: none;
+  z-index: -1;
+  animation: auroraDrift 12s ease-in-out infinite alternate;
+}
+
+.score-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgb(203 213 225 / 0.8);
+  background: rgb(255 255 255 / 0.7);
+  border-radius: 0.9rem;
+  padding: 0.8rem 0.9rem;
+  font-size: 0.9rem;
+  color: rgb(51 65 85);
+}
+
+.score-card strong {
+  font-family: var(--font-space-grotesk), sans-serif;
+  color: rgb(2 6 23);
+}
+
+.milestone-item {
+  border: 1px solid rgb(226 232 240);
+  border-radius: 0.9rem;
+  background: white;
+  padding: 1rem;
+}
+
+.milestone-day {
+  font-family: var(--font-space-grotesk), sans-serif;
+  color: rgb(217 119 6);
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.milestone-title {
+  margin-top: 0.35rem;
+  font-weight: 700;
+  color: rgb(15 23 42);
+}
+
+.reveal-up,
+.reveal-up-delay,
+.reveal-up-delay-2 {
+  animation: revealUp 0.8s ease-out both;
+}
+
+.reveal-up-delay {
+  animation-delay: 0.16s;
+}
+
+.reveal-up-delay-2 {
+  animation-delay: 0.32s;
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes auroraDrift {
+  from {
+    transform: translate3d(-1.2%, -0.5%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(1.2%, 0.8%, 0) scale(1.03);
+  }
 }

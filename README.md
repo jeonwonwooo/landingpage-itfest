@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Landing Page ITFest
 
-## Getting Started
+Template kompetisi landing page berbasis Next.js 16 + Tailwind CSS 4.
 
-First, run the development server:
+## Menjalankan di Lokal
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Struktur Penting
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/page.tsx`: konten landing page utama
+- `app/globals.css`: styling global dan animasi
+- `app/layout.tsx`: metadata dan konfigurasi font
 
-## Learn More
+## Build Produksi
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy ke Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Opsi 1 (Paling mudah, via GitHub)
 
-## Deploy on Vercel
+1. Push project ini ke repository GitHub.
+2. Buka https://vercel.com/new dan login.
+3. Pilih repository `landingpage-itfest`.
+4. Klik Deploy (setting default Next.js sudah otomatis benar).
+5. Setelah selesai, dapat URL produksi.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Opsi 2 (Via CLI)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm i -g vercel
+vercel
+```
+
+Ikuti prompt login dan konfirmasi project.
+
+Untuk update berikutnya:
+
+```bash
+vercel --prod
+```
+
+## Catatan Lomba
+
+- Ganti konten hero, timeline, dan CTA sesuai brief resmi lomba.
+- Optimasi aset gambar (WebP/AVIF) agar skor performa tetap tinggi.
+- Jalankan Lighthouse sebelum submit URL final.
