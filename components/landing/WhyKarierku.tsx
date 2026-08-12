@@ -31,14 +31,14 @@ export default function WhyKarierku() {
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {reasons.map((r, i) => (
             <Reveal key={r.title} delay={((i % 3) + 1) as 1 | 2 | 3}>
-              <div className="card-hover rounded-xl border border-slate-200 bg-white p-7">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-50 font-display text-sm font-bold text-[var(--primary)]">
+              <div className="card-hover rounded-xl border border-[#d8c8c0] bg-white p-7">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#eef0f8] font-display text-sm font-bold text-[var(--primary)]">
                   {String(i + 1).padStart(2, "0")}
                 </div>
-                <h3 className="font-display mt-4 text-lg font-bold text-slate-900">
+                <h3 className="font-display mt-4 text-lg font-bold text-[#202048]">
                   {r.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                <p className="mt-2 text-sm leading-relaxed text-[#5a545b]">
                   {r.desc}
                 </p>
               </div>

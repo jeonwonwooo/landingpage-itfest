@@ -15,7 +15,7 @@ export default function LogoMarquee({ label }: { label?: string }) {
   return (
     <div className="w-full">
       {label && (
-        <p className="mb-6 text-center text-sm text-slate-500">{label}</p>
+        <p className="mb-6 text-center text-sm text-[#6f6870]">{label}</p>
       )}
       <div className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[var(--background)] to-transparent" />
@@ -24,7 +24,7 @@ export default function LogoMarquee({ label }: { label?: string }) {
           {items.map((name, i) => (
             <span
               key={`${name}-${i}`}
-              className="shrink-0 text-sm font-semibold tracking-wide text-slate-400"
+              className="shrink-0 text-sm font-semibold tracking-wide text-[#a39da4]"
             >
               {name}
             </span>

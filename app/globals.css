@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --primary: #0d9488;
-  --primary-dark: #0f766e;
-  --accent: #f59e0b;
-  --muted: #64748b;
-  --border: #e2e8f0;
+  --background: #f8e8d8;
+  --foreground: #202048;
+  --primary: #202048;
+  --primary-dark: #14142e;
+  --accent: #c8a060;
+  --muted: #6f6870;
+  --border: #d8c8c0;
 }
 
 @theme inline {
@@ -39,7 +39,7 @@ body {
 
 /* Subtle dot grid — CareerZenith-style depth without noise */
 .bg-grid {
-  background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+  background-image: radial-gradient(circle, #d8c8c0 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -129,7 +129,7 @@ body {
 }
 
 .card-hover:hover {
-  border-color: #cbd5e1;
+  border-color: #d8c8c0;
   box-shadow: 0 4px 24px -4px rgb(15 23 42 / 0.08);
 }
 

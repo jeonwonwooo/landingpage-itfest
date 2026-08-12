@@ -37,17 +37,17 @@ export default function AIDemo() {
   }, [visibleCount]);
 
   return (
-    <section id="demo" className="border-y border-slate-200/80 bg-slate-50/60 py-20 md:py-28">
+    <section id="demo" className="border-y border-[#d8c8c0]/80 bg-[#fbf2e8]/60 py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
               AI Chat
             </p>
-            <h2 className="font-display mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+            <h2 className="font-display mt-3 text-3xl font-bold tracking-tight text-[#202048] md:text-4xl">
               Asisten karier personal
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-slate-600">
+            <p className="mt-4 text-base leading-relaxed text-[#5a545b]">
               Chat dengan AI yang membantu menulis, menulis ulang, dan
               mengoptimalkan CV section-by-section — berdasarkan ATS, job
               description, dan ekspektasi recruiter.
@@ -59,7 +59,7 @@ export default function AIDemo() {
 
           <Reveal delay={1}>
             <div className="relative">
-              <div className="absolute -right-2 -top-2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-amber-100">
+              <div className="absolute -right-2 -top-2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-[#f6e7cb]">
                 <svg
                   width="16"
                   height="16"
@@ -70,16 +70,16 @@ export default function AIDemo() {
                 </svg>
               </div>
 
-              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_8px_40px_-12px_rgba(15,23,42,0.12)]">
-                <div className="flex items-center gap-3 border-b border-slate-100 px-5 py-3.5">
+              <div className="overflow-hidden rounded-2xl border border-[#d8c8c0] bg-white shadow-[0_8px_40px_-12px_rgba(15,23,42,0.12)]">
+                <div className="flex items-center gap-3 border-b border-[#f8e8d8] px-5 py-3.5">
                   <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--primary)] text-xs font-bold text-white">
                     AI
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-slate-900">
+                    <p className="text-sm font-semibold text-[#202048]">
                       Karierku Assistant
                     </p>
-                    <p className="text-xs text-slate-400">Online</p>
+                    <p className="text-xs text-[#a39da4]">Online</p>
                   </div>
                 </div>
 
@@ -93,7 +93,7 @@ export default function AIDemo() {
                         className={`max-w-[88%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
                           msg.role === "user"
                             ? "rounded-br-md bg-[var(--primary)] text-white"
-                            : "rounded-bl-md bg-slate-100 text-slate-700"
+                            : "rounded-bl-md bg-[#f8e8d8] text-[#38365a]"
                         }`}
                       >
                         {msg.text}
@@ -103,10 +103,10 @@ export default function AIDemo() {
 
                   {typing && (
                     <div className="flex justify-start">
-                      <div className="flex items-center gap-1.5 rounded-2xl rounded-bl-md bg-slate-100 px-4 py-3 text-sm text-slate-400">
-                        <span className="typing-dot h-1.5 w-1.5 rounded-full bg-slate-400" />
-                        <span className="typing-dot h-1.5 w-1.5 rounded-full bg-slate-400" />
-                        <span className="typing-dot h-1.5 w-1.5 rounded-full bg-slate-400" />
+                      <div className="flex items-center gap-1.5 rounded-2xl rounded-bl-md bg-[#f8e8d8] px-4 py-3 text-sm text-[#a39da4]">
+                        <span className="typing-dot h-1.5 w-1.5 rounded-full bg-[#a39da4]" />
+                        <span className="typing-dot h-1.5 w-1.5 rounded-full bg-[#a39da4]" />
+                        <span className="typing-dot h-1.5 w-1.5 rounded-full bg-[#a39da4]" />
                       </div>
                     </div>
                   )}

@@ -16,12 +16,12 @@ const variants = {
   primary:
     "bg-[var(--primary)] text-white hover:bg-[var(--primary-dark)] shadow-sm shadow-teal-900/10",
   secondary:
-    "bg-white text-slate-900 hover:bg-slate-100 border border-slate-200 shadow-sm",
+    "bg-white text-[#202048] hover:bg-[#f8e8d8] border border-[#d8c8c0] shadow-sm",
   ghost:
-    "border border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50",
+    "border border-[#d8c8c0] bg-white text-[#38365a] hover:border-[#c4bab0] hover:bg-[#fbf2e8]",
   outline:
-    "border border-slate-300 bg-transparent text-slate-700 hover:border-slate-400 hover:bg-white",
-  white: "bg-white text-[var(--primary-dark)] hover:bg-slate-50 shadow-sm",
+    "border border-[#c4bab0] bg-transparent text-[#38365a] hover:border-[#a39da4] hover:bg-white",
+  white: "bg-white text-[var(--primary-dark)] hover:bg-[#fbf2e8] shadow-sm",
 };
 
 const sizes = {

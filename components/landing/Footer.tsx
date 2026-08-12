@@ -16,7 +16,7 @@ const infoLinks = [
 export default function Footer() {
   return (
     <footer>
-      <div className="border-t border-slate-200 bg-slate-50/80 py-16 md:py-20">
+      <div className="border-t border-[#d8c8c0] bg-[#fbf2e8]/80 py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 text-center lg:px-8">
           <Image
             src="/illustrations/footer-cloud.svg"
@@ -26,18 +26,18 @@ export default function Footer() {
             className="mx-auto"
             aria-hidden
           />
-          <h2 className="font-display mx-auto mt-6 max-w-lg text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
+          <h2 className="font-display mx-auto mt-6 max-w-lg text-2xl font-bold tracking-tight text-[#202048] md:text-3xl">
             Siap kirim lamaran?
             <br />
             Pastikan CV-mu sudah oke.
           </h2>
-          <p className="mx-auto mt-3 max-w-md text-sm text-slate-500">
+          <p className="mx-auto mt-3 max-w-md text-sm text-[#6f6870]">
             CV, LinkedIn, dan portofolio yang bikin HRD notice.
           </p>
         </div>
       </div>
 
-      <div className="border-t border-slate-200 bg-white py-12 md:py-16">
+      <div className="border-t border-[#d8c8c0] bg-white py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-4 lg:px-8">
           <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
             <div>
@@ -45,15 +45,15 @@ export default function Footer() {
                 <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--primary)] font-display text-sm font-bold text-white">
                   K
                 </span>
-                <span className="font-display text-lg font-bold text-slate-900">
+                <span className="font-display text-lg font-bold text-[#202048]">
                   Karierku
                 </span>
               </div>
-              <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-500">
+              <p className="mt-4 max-w-xs text-sm leading-relaxed text-[#6f6870]">
                 Platform CV, LinkedIn &amp; portofolio
                 untuk mahasiswa &amp; fresh graduate.
               </p>
-              <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-slate-400">
+              <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-[#a39da4]">
                 Ikuti kami
               </p>
               <div className="mt-2 flex gap-3">
@@ -61,7 +61,7 @@ export default function Footer() {
                   <a
                     key={s}
                     href="#"
-                    className="text-xs font-medium text-slate-500 hover:text-slate-900"
+                    className="text-xs font-medium text-[#6f6870] hover:text-[#202048]"
                   >
                     {s}
                   </a>
@@ -70,7 +70,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-slate-900">
+              <h3 className="text-sm font-semibold text-[#202048]">
                 Fitur Kami
               </h3>
               <ul className="mt-4 space-y-2.5">
@@ -78,7 +78,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-slate-500 transition-colors hover:text-slate-900"
+                      className="text-sm text-[#6f6870] transition-colors hover:text-[#202048]"
                     >
                       {link.label}
                     </Link>
@@ -88,7 +88,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-slate-900">
+              <h3 className="text-sm font-semibold text-[#202048]">
                 Informasi
               </h3>
               <ul className="mt-4 space-y-2.5">
@@ -96,7 +96,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-sm text-slate-500 transition-colors hover:text-slate-900"
+                      className="text-sm text-[#6f6870] transition-colors hover:text-[#202048]"
                     >
                       {link.label}
                     </a>
@@ -104,16 +104,16 @@ export default function Footer() {
                 ))}
               </ul>
               <div className="mt-6">
-                <p className="text-sm font-semibold text-slate-900">Kontak</p>
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="text-sm font-semibold text-[#202048]">Kontak</p>
+                <p className="mt-1 text-sm text-[#6f6870]">
                   hello@karierku.id
                 </p>
-                <p className="text-sm text-slate-500">+62 812-3456-7890</p>
+                <p className="text-sm text-[#6f6870]">+62 812-3456-7890</p>
               </div>
             </div>
           </div>
 
-          <div className="mt-10 border-t border-slate-200 pt-8 text-center text-sm text-slate-400">
+          <div className="mt-10 border-t border-[#d8c8c0] pt-8 text-center text-sm text-[#a39da4]">
             © 2026 Karierku. All rights reserved.
           </div>
         </div>

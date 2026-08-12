@@ -10,7 +10,7 @@ const features = [
     tags: ["Form Auto-Generate", "ATS Checker", "AI Feedback Bot"],
     href: "/cv",
     icon: "📄",
-    color: "border-teal-200 bg-teal-50/30",
+    color: "border-[#c6cbe8] bg-[#eef0f8]/30",
   },
   {
     title: "2. LinkedIn Branding Optimizer",
@@ -19,7 +19,7 @@ const features = [
     tags: ["Score 1-100", "Keyword Checklist", "Summary Generator"],
     href: "/linkedin",
     icon: "💼",
-    color: "border-blue-200 bg-blue-50/30",
+    color: "border-[#c6cbe8] bg-[#eef0f8]/30",
   },
   {
     title: "3. Portfolio Builder",
@@ -34,14 +34,14 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="relative bg-slate-50 py-20 overflow-hidden">
+    <section id="features" className="relative bg-[#fbf2e8] py-20 overflow-hidden">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center">
           <Badge variant="teal">Tiga Tools Utama</Badge>
-          <h2 className="font-display mt-4 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+          <h2 className="font-display mt-4 text-3xl font-bold tracking-tight text-[#202048] md:text-4xl">
             Siap Kerja dari Lamaran sampai Wawancara
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-[#5a545b]">
             Tiga alat yang saling terhubung: bikin CV, perkuat LinkedIn, dan tunjukkan portofolio — beres dalam satu tempat.
           </p>
         </Reveal>
@@ -56,13 +56,13 @@ export default function Features() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-2xl shadow-sm">
                   {item.icon}
                 </div>
-                <h3 className="font-display mt-5 text-xl font-bold text-slate-900">
+                <h3 className="font-display mt-5 text-xl font-bold text-[#202048]">
                   {item.title}
                 </h3>
-                <p className="mt-1 text-xs font-semibold text-teal-700">
+                <p className="mt-1 text-xs font-semibold text-[#151530]">
                   {item.subtitle}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                <p className="mt-3 text-sm leading-relaxed text-[#5a545b]">
                   {item.desc}
                 </p>
 
@@ -70,7 +70,7 @@ export default function Features() {
                   {item.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-md bg-white px-2 py-1 text-[10px] font-semibold text-slate-600 border border-slate-200"
+                      className="rounded-md bg-white px-2 py-1 text-[10px] font-semibold text-[#5a545b] border border-[#d8c8c0]"
                     >
                       {tag}
                     </span>
@@ -78,10 +78,10 @@ export default function Features() {
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-slate-200/60">
+              <div className="mt-6 pt-4 border-t border-[#d8c8c0]/60">
                 <Link
                   href={item.href}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-teal-700 hover:text-teal-900"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#151530] hover:text-[#0c0c1d]"
                 >
                   Buka Tools Ini →
                 </Link>

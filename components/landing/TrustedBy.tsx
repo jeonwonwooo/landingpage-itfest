@@ -6,12 +6,12 @@ export default function TrustedBy() {
     <section className="bg-white py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <Reveal className="text-center">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-[#202048] md:text-4xl">
             Dipakai mahasiswa
             <br />
             <span className="text-[var(--primary)]">yang serius cari kerja</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-base text-slate-600">
+          <p className="mx-auto mt-4 max-w-lg text-base text-[#5a545b]">
             Pengguna Karierku telah melamar ke berbagai perusahaan di Indonesia.
           </p>
         </Reveal>

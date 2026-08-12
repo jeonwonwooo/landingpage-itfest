@@ -27,13 +27,13 @@ export default function SectionHeader({
           {eyebrow}
         </p>
       )}
-      <h2 className="font-display mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl lg:text-[2.75rem] lg:leading-tight">
+      <h2 className="font-display mt-3 text-3xl font-bold tracking-tight text-[#202048] md:text-4xl lg:text-[2.75rem] lg:leading-tight">
         {title}
       </h2>
       {description && (
         <p
           className={cn(
-            "mt-4 text-base leading-relaxed text-slate-600 md:text-lg",
+            "mt-4 text-base leading-relaxed text-[#5a545b] md:text-lg",
             align === "center" && "mx-auto max-w-2xl"
           )}
         >

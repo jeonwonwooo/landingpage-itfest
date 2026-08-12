@@ -35,7 +35,7 @@ export default function Problem() {
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {problems.map((p, i) => (
             <Reveal key={p.title} delay={((i % 3) + 1) as 1 | 2 | 3}>
-              <div className="card-hover h-full rounded-xl border border-slate-200 bg-white p-6">
+              <div className="card-hover h-full rounded-xl border border-[#d8c8c0] bg-white p-6">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-red-50">
                   <svg
                     className="text-red-400"
@@ -51,10 +51,10 @@ export default function Problem() {
                     <line x1="6" y1="6" x2="18" y2="18" />
                   </svg>
                 </div>
-                <h3 className="font-display mt-4 text-base font-bold text-slate-900">
+                <h3 className="font-display mt-4 text-base font-bold text-[#202048]">
                   {p.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                <p className="mt-2 text-sm leading-relaxed text-[#5a545b]">
                   {p.desc}
                 </p>
               </div>

@@ -64,19 +64,19 @@ export default function PortfolioPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col">
+    <div className="min-h-screen bg-[#fbf2e8] flex flex-col">
       <Navbar />
 
       <main className="flex-1 mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 py-10">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-slate-200 pb-6">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-[#d8c8c0] pb-6">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-xs font-semibold text-purple-700">
               🎨 Fitur 3: Portfolio Builder &amp; Showcase
             </div>
-            <h1 className="font-display mt-2 text-3xl font-bold text-slate-900 md:text-4xl">
+            <h1 className="font-display mt-2 text-3xl font-bold text-[#202048] md:text-4xl">
               Bangun Showcase Karya Profesional &amp; Shareable Link
             </h1>
-            <p className="mt-1 text-sm text-slate-600">
+            <p className="mt-1 text-sm text-[#5a545b]">
               Pilih template layout, tambahkan studi kasus proyek, dan dapatkan 1 link portofolio unik.
             </p>
           </div>
@@ -84,7 +84,7 @@ export default function PortfolioPage() {
           <div className="rounded-xl border border-purple-200 bg-purple-50/50 p-4">
             <span className="text-[10px] font-bold uppercase text-purple-700">Shareable Custom Sub-Domain:</span>
             <div className="mt-1 flex items-center gap-2">
-              <span className="font-display font-bold text-sm text-slate-900">
+              <span className="font-display font-bold text-sm text-[#202048]">
                 karierku.id/p/<span className="text-purple-600">{username}</span>
               </span>
               <button
@@ -101,15 +101,15 @@ export default function PortfolioPage() {
           {/* Builder Controls */}
           <div className="lg:col-span-5 space-y-6">
             {/* Template Selector */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h2 className="font-display text-base font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
+            <div className="rounded-2xl border border-[#d8c8c0] bg-white p-6 shadow-sm">
+              <h2 className="font-display text-base font-bold text-[#202048] border-b border-[#f8e8d8] pb-3 flex items-center gap-2">
                 <span>📐</span> Pilih Template Layout Portofolio
               </h2>
               <div className="mt-4 grid grid-cols-2 gap-2">
                 <button
                   onClick={() => setTemplate("dev")}
                   className={`p-3 rounded-xl border text-left text-xs transition-all ${
-                    template === "dev" ? "border-purple-600 bg-purple-50 font-bold text-purple-900" : "border-slate-200 text-slate-700"
+                    template === "dev" ? "border-purple-600 bg-purple-50 font-bold text-purple-900" : "border-[#d8c8c0] text-[#38365a]"
                   }`}
                 >
                   💻 Web Developer Layout
@@ -117,7 +117,7 @@ export default function PortfolioPage() {
                 <button
                   onClick={() => setTemplate("design")}
                   className={`p-3 rounded-xl border text-left text-xs transition-all ${
-                    template === "design" ? "border-purple-600 bg-purple-50 font-bold text-purple-900" : "border-slate-200 text-slate-700"
+                    template === "design" ? "border-purple-600 bg-purple-50 font-bold text-purple-900" : "border-[#d8c8c0] text-[#38365a]"
                   }`}
                 >
                   🎨 Designer Visual Grid
@@ -125,7 +125,7 @@ export default function PortfolioPage() {
                 <button
                   onClick={() => setTemplate("writer")}
                   className={`p-3 rounded-xl border text-left text-xs transition-all ${
-                    template === "writer" ? "border-purple-600 bg-purple-50 font-bold text-purple-900" : "border-slate-200 text-slate-700"
+                    template === "writer" ? "border-purple-600 bg-purple-50 font-bold text-purple-900" : "border-[#d8c8c0] text-[#38365a]"
                   }`}
                 >
                   ✍️ Content Writer Case Study
@@ -133,7 +133,7 @@ export default function PortfolioPage() {
                 <button
                   onClick={() => setTemplate("umkm")}
                   className={`p-3 rounded-xl border text-left text-xs transition-all ${
-                    template === "umkm" ? "border-purple-600 bg-purple-50 font-bold text-purple-900" : "border-slate-200 text-slate-700"
+                    template === "umkm" ? "border-purple-600 bg-purple-50 font-bold text-purple-900" : "border-[#d8c8c0] text-[#38365a]"
                   }`}
                 >
                   🏪 UMKM Consultant Portfolio
@@ -142,29 +142,29 @@ export default function PortfolioPage() {
             </div>
 
             {/* Custom Subdomain Input */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h2 className="font-display text-base font-bold text-slate-900 border-b border-slate-100 pb-3">
+            <div className="rounded-2xl border border-[#d8c8c0] bg-white p-6 shadow-sm">
+              <h2 className="font-display text-base font-bold text-[#202048] border-b border-[#f8e8d8] pb-3">
                 🔗 Atur Custom Username Tautan
               </h2>
               <div className="mt-4">
-                <label className="block text-xs font-semibold text-slate-700">Username Subdomain</label>
-                <div className="mt-1 flex rounded-xl border border-slate-200 overflow-hidden text-xs">
-                  <span className="bg-slate-100 px-3 py-2 text-slate-500 font-medium border-r border-slate-200">
+                <label className="block text-xs font-semibold text-[#38365a]">Username Subdomain</label>
+                <div className="mt-1 flex rounded-xl border border-[#d8c8c0] overflow-hidden text-xs">
+                  <span className="bg-[#f8e8d8] px-3 py-2 text-[#6f6870] font-medium border-r border-[#d8c8c0]">
                     karierku.id/p/
                   </span>
                   <input
                     type="text"
                     value={username}
                     onChange={(e) => setUsername(e.target.value.toLowerCase().replace(/\s+/g, "-"))}
-                    className="flex-1 px-3 py-2 font-bold text-slate-900 focus:outline-none"
+                    className="flex-1 px-3 py-2 font-bold text-[#202048] focus:outline-none"
                   />
                 </div>
               </div>
             </div>
 
             {/* Add Project Form */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h2 className="font-display text-base font-bold text-slate-900 border-b border-slate-100 pb-3">
+            <div className="rounded-2xl border border-[#d8c8c0] bg-white p-6 shadow-sm">
+              <h2 className="font-display text-base font-bold text-[#202048] border-b border-[#f8e8d8] pb-3">
                 + Tambah Proyek / Studi Kasus
               </h2>
               <form onSubmit={handleAddProject} className="mt-4 space-y-3">
@@ -173,35 +173,35 @@ export default function PortfolioPage() {
                   placeholder="Judul Proyek (misal: Redesain Landing Page UMKM)"
                   value={newTitle}
                   onChange={(e) => setNewTitle(e.target.value)}
-                  className="w-full rounded-xl border border-slate-200 px-3 py-2 text-xs focus:border-purple-500 focus:outline-none"
+                  className="w-full rounded-xl border border-[#d8c8c0] px-3 py-2 text-xs focus:border-purple-500 focus:outline-none"
                 />
                 <input
                   type="text"
                   placeholder="Kategori Proyek"
                   value={newCategory}
                   onChange={(e) => setNewCategory(e.target.value)}
-                  className="w-full rounded-xl border border-slate-200 px-3 py-2 text-xs focus:border-purple-500 focus:outline-none"
+                  className="w-full rounded-xl border border-[#d8c8c0] px-3 py-2 text-xs focus:border-purple-500 focus:outline-none"
                 />
                 <textarea
                   rows={2}
                   placeholder="Studi kasus singkat &amp; dampak hasil proyek"
                   value={newDesc}
                   onChange={(e) => setNewDesc(e.target.value)}
-                  className="w-full rounded-xl border border-slate-200 p-3 text-xs focus:border-purple-500 focus:outline-none"
+                  className="w-full rounded-xl border border-[#d8c8c0] p-3 text-xs focus:border-purple-500 focus:outline-none"
                 />
                 <input
                   type="text"
                   placeholder="Link Live Proyek / Demo / Repository"
                   value={newLink}
                   onChange={(e) => setNewLink(e.target.value)}
-                  className="w-full rounded-xl border border-slate-200 px-3 py-2 text-xs focus:border-purple-500 focus:outline-none"
+                  className="w-full rounded-xl border border-[#d8c8c0] px-3 py-2 text-xs focus:border-purple-500 focus:outline-none"
                 />
                 <input
                   type="text"
                   placeholder="Tags (pisahkan koma: Next.js, Figma, SEO)"
                   value={newTags}
                   onChange={(e) => setNewTags(e.target.value)}
-                  className="w-full rounded-xl border border-slate-200 px-3 py-2 text-xs focus:border-purple-500 focus:outline-none"
+                  className="w-full rounded-xl border border-[#d8c8c0] px-3 py-2 text-xs focus:border-purple-500 focus:outline-none"
                 />
                 <button
                   type="submit"
@@ -215,12 +215,12 @@ export default function PortfolioPage() {
 
           {/* Live Preview Portfolio Canvas */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="rounded-2xl border border-slate-300 bg-slate-900 p-8 text-white shadow-xl">
-              <div className="border-b border-slate-800 pb-6 flex items-center justify-between">
+            <div className="rounded-2xl border border-[#c4bab0] bg-[#202048] p-8 text-white shadow-xl">
+              <div className="border-b border-[#2b2a52] pb-6 flex items-center justify-between">
                 <div>
                   <span className="text-[10px] uppercase font-bold text-purple-400">Live Public Preview Page</span>
                   <h2 className="font-display text-2xl font-bold text-white">Budi Pratama</h2>
-                  <p className="text-xs text-slate-400 mt-1">karierku.id/p/{username}</p>
+                  <p className="text-xs text-[#a39da4] mt-1">karierku.id/p/{username}</p>
                 </div>
                 <span className="rounded-full bg-purple-500/20 px-3 py-1 text-xs font-semibold text-purple-300">
                   {template.toUpperCase()} Template
@@ -228,7 +228,7 @@ export default function PortfolioPage() {
               </div>
 
               <div className="mt-6 space-y-6">
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                <p className="text-xs font-bold text-[#a39da4] uppercase tracking-wider">
                   Showcase Proyek ({projects.length} Karya)
                 </p>
 
@@ -236,7 +236,7 @@ export default function PortfolioPage() {
                   {projects.map((proj) => (
                     <div
                       key={proj.id}
-                      className="rounded-xl border border-slate-800 bg-slate-950 p-5 transition-all hover:border-purple-500/50"
+                      className="rounded-xl border border-[#2b2a52] bg-[#14142e] p-5 transition-all hover:border-purple-500/50"
                     >
                       <div className="flex justify-between items-start">
                         <div>
@@ -253,11 +253,11 @@ export default function PortfolioPage() {
                         </a>
                       </div>
 
-                      <p className="mt-2 text-xs text-slate-300 leading-relaxed">{proj.description}</p>
+                      <p className="mt-2 text-xs text-[#c4bab0] leading-relaxed">{proj.description}</p>
 
                       <div className="mt-4 flex flex-wrap gap-1.5">
                         {proj.tags.map((t, idx) => (
-                          <span key={idx} className="rounded-md bg-slate-800 px-2 py-0.5 text-[10px] text-slate-300">
+                          <span key={idx} className="rounded-md bg-[#2b2a52] px-2 py-0.5 text-[10px] text-[#c4bab0]">
                             {t}
                           </span>
                         ))}

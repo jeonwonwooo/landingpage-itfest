@@ -21,7 +21,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="border-t border-slate-200/80 bg-white py-20 md:py-28">
+    <section className="border-t border-[#d8c8c0]/80 bg-white py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <Reveal>
           <SectionHeader
@@ -38,16 +38,16 @@ export default function HowItWorks() {
                 {i < steps.length - 1 && (
                   <span
                     aria-hidden
-                    className="absolute left-[calc(50%+2rem)] top-8 hidden h-px w-[calc(100%-4rem)] bg-slate-200 md:block"
+                    className="absolute left-[calc(50%+2rem)] top-8 hidden h-px w-[calc(100%-4rem)] bg-[#d8c8c0] md:block"
                   />
                 )}
                 <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border-2 border-[var(--primary)] bg-white font-display text-lg font-bold text-[var(--primary)]">
                   {step.num}
                 </div>
-                <h3 className="font-display mt-5 text-lg font-bold text-slate-900">
+                <h3 className="font-display mt-5 text-lg font-bold text-[#202048]">
                   {step.title}
                 </h3>
-                <p className="mx-auto mt-2 max-w-xs text-sm leading-relaxed text-slate-600">
+                <p className="mx-auto mt-2 max-w-xs text-sm leading-relaxed text-[#5a545b]">
                   {step.desc}
                 </p>
               </div>

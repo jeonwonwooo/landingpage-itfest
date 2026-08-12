@@ -9,7 +9,7 @@ const testimonials = [
     name: "Rina A.",
     role: "Mahasiswa Semester Akhir",
     initials: "RA",
-    color: "bg-teal-50 text-teal-800",
+    color: "bg-[#eef0f8] text-[#101026]",
   },
   {
     title: "Dari ditolak ke shortlist",
@@ -27,7 +27,7 @@ const testimonials = [
     name: "Bayu K.",
     role: "Technical Writer",
     initials: "AK",
-    color: "bg-emerald-50 text-emerald-800",
+    color: "bg-[#fbf3e4] text-[#8c6f3f]",
   },
   {
     title: "Tahu kapan CV siap",
@@ -36,7 +36,7 @@ const testimonials = [
     name: "Rizky P.",
     role: "Product Manager",
     initials: "KP",
-    color: "bg-amber-50 text-amber-800",
+    color: "bg-[#fbf3e4] text-[#8c6f3f]",
   },
   {
     title: "Portofolio dalam satu link",
@@ -64,22 +64,22 @@ function TestimonialCard({
   t: (typeof testimonials)[number];
 }) {
   return (
-    <article className="card-hover flex h-full w-[320px] shrink-0 flex-col rounded-2xl border border-slate-200 bg-white p-6 sm:w-[360px]">
-      <h3 className="font-display text-base font-bold text-slate-900">
+    <article className="card-hover flex h-full w-[320px] shrink-0 flex-col rounded-2xl border border-[#d8c8c0] bg-white p-6 sm:w-[360px]">
+      <h3 className="font-display text-base font-bold text-[#202048]">
         {t.title}
       </h3>
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-[#5a545b]">
         &ldquo;{t.quote}&rdquo;
       </p>
-      <div className="mt-5 flex items-center gap-3 border-t border-slate-100 pt-5">
+      <div className="mt-5 flex items-center gap-3 border-t border-[#f8e8d8] pt-5">
         <div
           className={`flex h-9 w-9 items-center justify-center rounded-full text-xs font-bold ${t.color}`}
         >
           {t.initials}
         </div>
         <div>
-          <p className="text-sm font-semibold text-slate-900">{t.name}</p>
-          <p className="text-xs text-slate-500">{t.role}</p>
+          <p className="text-sm font-semibold text-[#202048]">{t.name}</p>
+          <p className="text-xs text-[#6f6870]">{t.role}</p>
         </div>
       </div>
     </article>

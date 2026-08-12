@@ -15,13 +15,13 @@ export default function CTA() {
     <section className="py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <Reveal>
-          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+          <div className="overflow-hidden rounded-2xl border border-[#d8c8c0] bg-white">
             <div className="grid items-center gap-8 p-8 md:grid-cols-2 md:p-12">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
                   Masih bingung?
                 </p>
-                <h2 className="font-display mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+                <h2 className="font-display mt-3 text-3xl font-bold tracking-tight text-[#202048] md:text-4xl">
                   Perbaiki CV-mu
                   <br />
                   dengan beberapa klik
@@ -31,7 +31,7 @@ export default function CTA() {
                     <Link
                       key={s.key}
                       href={s.href}
-                      className="rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1.5 text-xs font-medium text-slate-600 transition-colors hover:border-slate-300 hover:bg-white"
+                      className="rounded-full border border-[#d8c8c0] bg-[#fbf2e8] px-3.5 py-1.5 text-xs font-medium text-[#5a545b] transition-colors hover:border-[#c4bab0] hover:bg-white"
                     >
                       {s.key}
                     </Link>
@@ -41,7 +41,7 @@ export default function CTA() {
                   <Button href="/cv">Buat CV Sekarang</Button>
                   <a
                     href="mailto:hello@karierku.id"
-                    className="text-sm font-medium text-slate-500 hover:text-slate-900"
+                    className="text-sm font-medium text-[#6f6870] hover:text-[#202048]"
                   >
                     hello@karierku.id
                   </a>

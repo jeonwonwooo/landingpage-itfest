@@ -15,12 +15,12 @@ const users = [
 
 export default function UserShowcase() {
   return (
-    <section className="overflow-hidden border-y border-slate-200/80 bg-slate-50/60 py-16 md:py-24">
+    <section className="overflow-hidden border-y border-[#d8c8c0]/80 bg-[#fbf2e8]/60 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <Reveal className="text-center">
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-[#6f6870]">
             Lebih dari{" "}
-            <strong className="font-semibold text-slate-800">
+            <strong className="font-semibold text-[#2b2a52]">
               12.000+ mahasiswa
             </strong>{" "}
             sudah memperbaiki profil kariernya
@@ -31,7 +31,7 @@ export default function UserShowcase() {
           {users.map((u, i) => (
             <Reveal key={u.seed} delay={((i % 3) + 1) as 1 | 2 | 3}>
               <div className={`group ${u.offset}`}>
-                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-transform duration-300 group-hover:-translate-y-1">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-[#d8c8c0] bg-white shadow-sm transition-transform duration-300 group-hover:-translate-y-1">
                   <Image
                     src={`https://api.dicebear.com/7.x/notionists/svg?seed=${u.seed}&backgroundColor=b6e3f4,c0aede,d1d4f9`}
                     alt={`Profil ${u.name}`}
@@ -39,7 +39,7 @@ export default function UserShowcase() {
                     className="object-cover p-2"
                     unoptimized
                   />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900/70 to-transparent p-2 pt-6">
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#202048]/70 to-transparent p-2 pt-6">
                     <p className="text-[10px] font-semibold text-white">
                       {u.name}
                     </p>
