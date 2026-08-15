@@ -76,12 +76,12 @@ export default function AIChatbotDemo() {
     <section className="relative bg-white py-20 overflow-hidden">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal className="text-center">
-          <Badge variant="teal">Fitur 1: AI Chatbot Reviewer</Badge>
+          <Badge variant="teal">Fitur 1: Demo Reviewer CV</Badge>
           <h2 className="font-display mt-4 text-3xl font-bold tracking-tight text-[#202048] md:text-4xl">
-            Simulasi Koreksi CV Interaktif Berbasis AI
+            Simulasi Koreksi CV Interaktif
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-[#5a545b]">
-            Dapatkan masukan langsung mengenai kekurangan pada deskripsi pekerjaan Anda sebelum dikirimkan ke HRD atau pendaftaran magang.
+          <p className="mx-auto mt-4 max-w-2xl text-base text-[#6f6870]">
+            Coba beberapa contoh kalimat CV dan lihat jenis masukan yang akan muncul saat deskripsi pengalaman masih terlalu umum.
           </p>
         </Reveal>
 
@@ -89,7 +89,7 @@ export default function AIChatbotDemo() {
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
             {/* Sidebar Presets */}
             <div className="lg:col-span-4 space-y-3">
-              <p className="text-xs font-bold uppercase tracking-wider text-[#a39da4]">
+              <p className="text-xs font-bold uppercase tracking-wider text-[#6f6870]">
                 Pilih Contoh Kalimat CV:
               </p>
               {presets.map((preset, idx) => (
@@ -102,8 +102,8 @@ export default function AIChatbotDemo() {
                   }}
                   className={`w-full text-left rounded-xl p-4 border transition-all ${
                     selectedIndex === idx && !customInput
-                      ? "border-[#202048] bg-[#eef0f8]/50 shadow-sm ring-1 ring-[#202048]"
-                      : "border-[#d8c8c0] bg-white hover:border-[#c4bab0] hover:bg-[#fbf2e8]"
+                      ? "border-[#202048] bg-[#202048]/5 shadow-sm ring-1 ring-[#202048]"
+                      : "border-[#d8c8c0] bg-[#202048]/4 hover:border-[#c8a060] hover:bg-[#202048]/8"
                   }`}
                 >
                   <p className="font-display text-sm font-bold text-[#202048]">
@@ -116,7 +116,7 @@ export default function AIChatbotDemo() {
               ))}
 
               <div className="pt-2">
-                <p className="text-xs font-bold uppercase tracking-wider text-[#a39da4] mb-2">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#6f6870] mb-2">
                   Atau Uji Kalimat Anda Sendiri:
                 </p>
                 <div className="flex gap-2">
@@ -130,7 +130,7 @@ export default function AIChatbotDemo() {
                   <button
                     type="button"
                     onClick={handleAnalyzeCustom}
-                    className="rounded-xl bg-[#202048] px-3.5 py-2 text-xs font-bold text-white hover:bg-[#2b2a52]"
+                    className="rounded-xl bg-[#202048] px-3.5 py-2 text-xs font-bold text-[#f8e8d8] hover:bg-[#c8a060]"
                   >
                     Analisis
                   </button>
@@ -140,26 +140,26 @@ export default function AIChatbotDemo() {
 
             {/* Main Interactive Chat Area */}
             <div className="lg:col-span-8">
-              <div className="overflow-hidden rounded-2xl border border-[#d8c8c0] bg-[#202048] text-white shadow-xl">
+              <div className="overflow-hidden rounded-2xl border border-[#d8c8c0] bg-[#202048] text-[#f8e8d8] shadow-xl">
                 {/* Header Chat */}
-                <div className="flex items-center justify-between border-b border-[#2b2a52] bg-[#14142e]/80 px-6 py-4">
+                <div className="flex items-center justify-between border-b border-[#d8c8c0]/40 bg-[#202048]/90 px-6 py-4">
                   <div className="flex items-center gap-3">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#202048] text-[#14142e] font-bold text-sm">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#c8a060] text-[#202048] font-bold text-sm">
                       K
                     </span>
                     <div>
-                      <h3 className="font-display text-sm font-bold text-white">
-                        Karierku AI Reviewer Bot (Gemini Engine)
+                      <h3 className="font-display text-sm font-bold text-[#f8e8d8]">
+                        Karierku Reviewer Demo
                       </h3>
-                      <p className="text-[10px] text-[#6f74b0]">
-                        ● Online • Menjawab dalam &lt;1 detik
+                      <p className="text-[10px] text-[#d8c8c0]">
+                        ● Simulasi contoh review
                       </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-xs text-[#a39da4]">Skor Kualitas:</span>
+                    <span className="text-xs text-[#d8c8c0]">Skor Contoh:</span>
                     <span className={`font-display font-bold text-sm px-2.5 py-1 rounded-lg ${
-                      activePreset.aiReply.score >= 70 ? "bg-[#c8a060]/20 text-[#d8b475]" : "bg-[#c8a060]/20 text-[#d8b475]"
+                      activePreset.aiReply.score >= 70 ? "bg-[#c8a060]/20 text-[#f8e8d8]" : "bg-[#c8a060]/20 text-[#f8e8d8]"
                     }`}>
                       {activePreset.aiReply.score}/100
                     </span>
@@ -170,8 +170,8 @@ export default function AIChatbotDemo() {
                 <div className="p-6 space-y-4 max-h-[480px] overflow-y-auto">
                   {/* User Bubble */}
                   <div className="flex justify-end">
-                    <div className="max-w-md rounded-2xl bg-[#1a1a3a] px-4 py-3 text-xs text-white shadow-sm">
-                      <p className="font-semibold text-[10px] text-[#e1e4f2] mb-1">Anda (Pencari Kerja)</p>
+                    <div className="max-w-md rounded-2xl bg-[#202048]/90 px-4 py-3 text-xs text-[#f8e8d8] shadow-sm">
+                      <p className="mb-1 text-[10px] font-semibold text-[#d8c8c0]">Input Contoh</p>
                       <p className="leading-relaxed">
                         {customInput ? customInput : activePreset.userText}
                       </p>
@@ -180,40 +180,40 @@ export default function AIChatbotDemo() {
 
                   {/* AI Bubble */}
                   {isAnalyzing ? (
-                    <div className="flex items-center gap-2 text-[#a39da4] text-xs py-4">
-                      <span className="h-2 w-2 rounded-full bg-[#6f74b0] typing-dot" />
-                      <span className="h-2 w-2 rounded-full bg-[#6f74b0] typing-dot" />
-                      <span className="h-2 w-2 rounded-full bg-[#6f74b0] typing-dot" />
-                      <span>Sedang menganalisis struktur ATS dan kata kunci...</span>
+                    <div className="flex items-center gap-2 text-[#6f6870] text-xs py-4">
+                      <span className="h-2 w-2 rounded-full bg-[#6f6870] typing-dot" />
+                      <span className="h-2 w-2 rounded-full bg-[#6f6870] typing-dot" />
+                      <span className="h-2 w-2 rounded-full bg-[#6f6870] typing-dot" />
+                      <span>Menyiapkan contoh review...</span>
                     </div>
                   ) : (
                     <div className="flex items-start gap-3">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#202048] text-[#14142e] font-bold text-xs">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#c8a060] text-[#202048] font-bold text-xs">
                         AI
                       </div>
-                      <div className="space-y-3 flex-1 rounded-2xl border border-[#2b2a52] bg-[#14142e] p-4 text-xs">
-                        <div className="flex items-center justify-between border-b border-[#2b2a52] pb-2">
-                          <span className="font-semibold text-[#d8b475]">
-                            ⚠️ {activePreset.aiReply.verdict}
+                      <div className="space-y-3 flex-1 rounded-2xl border border-[#d8c8c0] bg-[#202048]/90 p-4 text-xs">
+                        <div className="flex items-center justify-between border-b border-[#d8c8c0]/40 pb-2">
+                          <span className="font-semibold text-[#c8a060]">
+                            {activePreset.aiReply.verdict}
                           </span>
-                          <span className="text-[10px] text-[#6f6870]">Rekomendasi ATS</span>
+                          <span className="text-[10px] text-[#d8c8c0]">Catatan Review</span>
                         </div>
 
                         <div>
-                          <p className="text-[11px] font-bold text-[#c4bab0]">Poin Perbaikan Kritis:</p>
-                          <ul className="mt-1.5 space-y-1 text-[#a39da4]">
+                          <p className="text-[11px] font-bold text-[#d8c8c0]">Poin Perbaikan Kritis:</p>
+                          <ul className="mt-1.5 space-y-1 text-[#f8e8d8]">
                             {activePreset.aiReply.tips.map((tip, idx) => (
                               <li key={idx} className="flex items-start gap-2">
-                                <span className="text-[#6f74b0] font-bold">•</span>
+                                <span className="text-[#c8a060] font-bold">•</span>
                                 <span>{tip}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
 
-                        <div className="rounded-xl border border-[#202048]/30 bg-[#080814]/40 p-3">
-                          <p className="text-[11px] font-bold text-[#a4a8d6]">💡 Saran Hasil Perbaikan (Siap Paste):</p>
-                          <p className="mt-1 text-[#d8c8c0] leading-relaxed font-medium">
+                        <div className="rounded-xl border border-[#d8c8c0]/40 bg-[#202048]/70 p-3">
+                          <p className="text-[11px] font-bold text-[#c8a060]">Contoh Hasil Perbaikan:</p>
+                          <p className="mt-1 text-[#f8e8d8] leading-relaxed font-medium">
                             &quot;{activePreset.aiReply.betterText}&quot;
                           </p>
                         </div>
@@ -223,11 +223,11 @@ export default function AIChatbotDemo() {
                 </div>
 
                 {/* Footer Chat Action */}
-                <div className="border-t border-[#2b2a52] bg-[#14142e] px-6 py-3 flex items-center justify-between text-xs">
-                  <span className="text-[#a39da4]">Ingin mengoreksi seluruh dokumen CV Anda?</span>
+                <div className="border-t border-[#d8c8c0]/40 bg-[#202048]/90 px-6 py-3 flex items-center justify-between text-xs">
+                  <span className="text-[#d8c8c0]">Lanjutkan ke editor CV untuk melihat contoh review lain.</span>
                   <a
                     href="/cv"
-                    className="rounded-lg bg-[#202048] px-4 py-1.5 font-bold text-[#14142e] hover:bg-[#6f74b0]"
+                    className="rounded-lg bg-[#c8a060] px-4 py-1.5 font-bold text-[#202048] hover:bg-[#f8e8d8]"
                   >
                     Buka Full CV Reviewer →
                   </a>

@@ -22,7 +22,7 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section className="bg-[#f8e8d8] py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <Reveal>
           <SectionHeader
@@ -35,10 +35,10 @@ export default function Problem() {
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {problems.map((p, i) => (
             <Reveal key={p.title} delay={((i % 3) + 1) as 1 | 2 | 3}>
-              <div className="card-hover h-full rounded-xl border border-[#d8c8c0] bg-white p-6">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-red-50">
+              <div className="card-hover h-full rounded-xl border border-[#d8c8c0] bg-[#202048]/5 p-6">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#c8a060]/12">
                   <svg
-                    className="text-red-400"
+                    className="text-[#c8a060]"
                     width="16"
                     height="16"
                     viewBox="0 0 24 24"
@@ -54,7 +54,7 @@ export default function Problem() {
                 <h3 className="font-display mt-4 text-base font-bold text-[#202048]">
                   {p.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#5a545b]">
+                <p className="mt-2 text-sm leading-relaxed text-[#6f6870]">
                   {p.desc}
                 </p>
               </div>

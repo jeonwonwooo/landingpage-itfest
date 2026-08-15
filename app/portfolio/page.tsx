@@ -64,32 +64,32 @@ export default function PortfolioPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#fbf2e8] flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
       <main className="flex-1 mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 py-10">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-[#d8c8c0] pb-6">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-purple-200 bg-purple-50 px-3 py-1 text-xs font-semibold text-purple-700">
-              🎨 Fitur 3: Portfolio Builder &amp; Showcase
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#d8c8c0] bg-[#202048]/5 px-3 py-1 text-xs font-semibold text-[#202048]">
+              Fitur 3: Portfolio Builder &amp; Showcase
             </div>
             <h1 className="font-display mt-2 text-3xl font-bold text-[#202048] md:text-4xl">
               Bangun Showcase Karya Profesional &amp; Shareable Link
             </h1>
-            <p className="mt-1 text-sm text-[#5a545b]">
+            <p className="mt-1 text-sm text-[#6f6870]">
               Pilih template layout, tambahkan studi kasus proyek, dan dapatkan 1 link portofolio unik.
             </p>
           </div>
 
-          <div className="rounded-xl border border-purple-200 bg-purple-50/50 p-4">
-            <span className="text-[10px] font-bold uppercase text-purple-700">Shareable Custom Sub-Domain:</span>
+          <div className="rounded-xl border border-[#d8c8c0] bg-[#202048]/5 p-4">
+            <span className="text-[10px] font-bold uppercase text-[#202048]">Shareable Custom Sub-Domain:</span>
             <div className="mt-1 flex items-center gap-2">
               <span className="font-display font-bold text-sm text-[#202048]">
-                karierku.id/p/<span className="text-purple-600">{username}</span>
+                karierku.id/p/<span className="text-[#c8a060]">{username}</span>
               </span>
               <button
                 onClick={() => alert(`Tautan karierku.id/p/${username} disalin ke clipboard!`)}
-                className="rounded-lg bg-purple-600 px-3 py-1 text-xs font-bold text-white hover:bg-purple-500"
+                className="rounded-lg bg-[#202048] px-3 py-1 text-xs font-bold text-[#f8e8d8] hover:bg-[#c8a060]"
               >
                 Salin Link
               </button>
@@ -101,53 +101,53 @@ export default function PortfolioPage() {
           {/* Builder Controls */}
           <div className="lg:col-span-5 space-y-6">
             {/* Template Selector */}
-            <div className="rounded-2xl border border-[#d8c8c0] bg-white p-6 shadow-sm">
+            <div className="rounded-2xl border border-[#d8c8c0] bg-[#202048]/5 p-6 shadow-sm">
               <h2 className="font-display text-base font-bold text-[#202048] border-b border-[#f8e8d8] pb-3 flex items-center gap-2">
-                <span>📐</span> Pilih Template Layout Portofolio
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg> Pilih Template Layout Portofolio
               </h2>
               <div className="mt-4 grid grid-cols-2 gap-2">
                 <button
                   onClick={() => setTemplate("dev")}
                   className={`p-3 rounded-xl border text-left text-xs transition-all ${
-                    template === "dev" ? "border-purple-600 bg-purple-50 font-bold text-purple-900" : "border-[#d8c8c0] text-[#38365a]"
+                    template === "dev" ? "border-[#c8a060] bg-[#c8a060]/12 font-bold text-[#202048]" : "border-[#d8c8c0] text-[#6f6870]"
                   }`}
                 >
-                  💻 Web Developer Layout
+                  Web Developer Layout
                 </button>
                 <button
                   onClick={() => setTemplate("design")}
                   className={`p-3 rounded-xl border text-left text-xs transition-all ${
-                    template === "design" ? "border-purple-600 bg-purple-50 font-bold text-purple-900" : "border-[#d8c8c0] text-[#38365a]"
+                    template === "design" ? "border-[#c8a060] bg-[#c8a060]/12 font-bold text-[#202048]" : "border-[#d8c8c0] text-[#6f6870]"
                   }`}
                 >
-                  🎨 Designer Visual Grid
+                  Designer Visual Grid
                 </button>
                 <button
                   onClick={() => setTemplate("writer")}
                   className={`p-3 rounded-xl border text-left text-xs transition-all ${
-                    template === "writer" ? "border-purple-600 bg-purple-50 font-bold text-purple-900" : "border-[#d8c8c0] text-[#38365a]"
+                    template === "writer" ? "border-[#c8a060] bg-[#c8a060]/12 font-bold text-[#202048]" : "border-[#d8c8c0] text-[#6f6870]"
                   }`}
                 >
-                  ✍️ Content Writer Case Study
+                  Content Writer Case Study
                 </button>
                 <button
                   onClick={() => setTemplate("umkm")}
                   className={`p-3 rounded-xl border text-left text-xs transition-all ${
-                    template === "umkm" ? "border-purple-600 bg-purple-50 font-bold text-purple-900" : "border-[#d8c8c0] text-[#38365a]"
+                    template === "umkm" ? "border-[#c8a060] bg-[#c8a060]/12 font-bold text-[#202048]" : "border-[#d8c8c0] text-[#6f6870]"
                   }`}
                 >
-                  🏪 UMKM Consultant Portfolio
+                  UMKM Consultant Portfolio
                 </button>
               </div>
             </div>
 
             {/* Custom Subdomain Input */}
-            <div className="rounded-2xl border border-[#d8c8c0] bg-white p-6 shadow-sm">
+            <div className="rounded-2xl border border-[#d8c8c0] bg-[#202048]/5 p-6 shadow-sm">
               <h2 className="font-display text-base font-bold text-[#202048] border-b border-[#f8e8d8] pb-3">
-                🔗 Atur Custom Username Tautan
+                Atur Custom Username Tautan
               </h2>
               <div className="mt-4">
-                <label className="block text-xs font-semibold text-[#38365a]">Username Subdomain</label>
+                <label className="block text-xs font-semibold text-[#6f6870]">Username Subdomain</label>
                 <div className="mt-1 flex rounded-xl border border-[#d8c8c0] overflow-hidden text-xs">
                   <span className="bg-[#f8e8d8] px-3 py-2 text-[#6f6870] font-medium border-r border-[#d8c8c0]">
                     karierku.id/p/
@@ -163,7 +163,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* Add Project Form */}
-            <div className="rounded-2xl border border-[#d8c8c0] bg-white p-6 shadow-sm">
+            <div className="rounded-2xl border border-[#d8c8c0] bg-[#202048]/5 p-6 shadow-sm">
               <h2 className="font-display text-base font-bold text-[#202048] border-b border-[#f8e8d8] pb-3">
                 + Tambah Proyek / Studi Kasus
               </h2>
@@ -173,39 +173,39 @@ export default function PortfolioPage() {
                   placeholder="Judul Proyek (misal: Redesain Landing Page UMKM)"
                   value={newTitle}
                   onChange={(e) => setNewTitle(e.target.value)}
-                  className="w-full rounded-xl border border-[#d8c8c0] px-3 py-2 text-xs focus:border-purple-500 focus:outline-none"
+                  className="w-full rounded-xl border border-[#d8c8c0] px-3 py-2 text-xs focus:border-[#c8a060] focus:outline-none"
                 />
                 <input
                   type="text"
                   placeholder="Kategori Proyek"
                   value={newCategory}
                   onChange={(e) => setNewCategory(e.target.value)}
-                  className="w-full rounded-xl border border-[#d8c8c0] px-3 py-2 text-xs focus:border-purple-500 focus:outline-none"
+                  className="w-full rounded-xl border border-[#d8c8c0] px-3 py-2 text-xs focus:border-[#c8a060] focus:outline-none"
                 />
                 <textarea
                   rows={2}
                   placeholder="Studi kasus singkat &amp; dampak hasil proyek"
                   value={newDesc}
                   onChange={(e) => setNewDesc(e.target.value)}
-                  className="w-full rounded-xl border border-[#d8c8c0] p-3 text-xs focus:border-purple-500 focus:outline-none"
+                  className="w-full rounded-xl border border-[#d8c8c0] p-3 text-xs focus:border-[#c8a060] focus:outline-none"
                 />
                 <input
                   type="text"
                   placeholder="Link Live Proyek / Demo / Repository"
                   value={newLink}
                   onChange={(e) => setNewLink(e.target.value)}
-                  className="w-full rounded-xl border border-[#d8c8c0] px-3 py-2 text-xs focus:border-purple-500 focus:outline-none"
+                  className="w-full rounded-xl border border-[#d8c8c0] px-3 py-2 text-xs focus:border-[#c8a060] focus:outline-none"
                 />
                 <input
                   type="text"
                   placeholder="Tags (pisahkan koma: Next.js, Figma, SEO)"
                   value={newTags}
                   onChange={(e) => setNewTags(e.target.value)}
-                  className="w-full rounded-xl border border-[#d8c8c0] px-3 py-2 text-xs focus:border-purple-500 focus:outline-none"
+                  className="w-full rounded-xl border border-[#d8c8c0] px-3 py-2 text-xs focus:border-[#c8a060] focus:outline-none"
                 />
                 <button
                   type="submit"
-                  className="w-full rounded-xl bg-purple-700 py-2.5 text-xs font-bold text-white hover:bg-purple-600"
+                  className="w-full rounded-xl bg-[#202048] py-2.5 text-xs font-bold text-[#f8e8d8] hover:bg-[#c8a060]"
                 >
                   + Publikasikan Proyek Ini
                 </button>
@@ -215,20 +215,20 @@ export default function PortfolioPage() {
 
           {/* Live Preview Portfolio Canvas */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="rounded-2xl border border-[#c4bab0] bg-[#202048] p-8 text-white shadow-xl">
-              <div className="border-b border-[#2b2a52] pb-6 flex items-center justify-between">
+            <div className="rounded-2xl border border-[#d8c8c0] bg-[#202048] p-8 text-[#f8e8d8] shadow-xl">
+              <div className="border-b border-[#d8c8c0]/40 pb-6 flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] uppercase font-bold text-purple-400">Live Public Preview Page</span>
-                  <h2 className="font-display text-2xl font-bold text-white">Budi Pratama</h2>
-                  <p className="text-xs text-[#a39da4] mt-1">karierku.id/p/{username}</p>
+                  <span className="text-[10px] uppercase font-bold text-[#c8a060]">Live Public Preview Page</span>
+                  <h2 className="font-display text-2xl font-bold text-[#f8e8d8]">Budi Pratama</h2>
+                  <p className="text-xs text-[#d8c8c0] mt-1">karierku.id/p/{username}</p>
                 </div>
-                <span className="rounded-full bg-purple-500/20 px-3 py-1 text-xs font-semibold text-purple-300">
+                <span className="rounded-full bg-[#c8a060]/12 px-3 py-1 text-xs font-semibold text-[#f8e8d8]">
                   {template.toUpperCase()} Template
                 </span>
               </div>
 
               <div className="mt-6 space-y-6">
-                <p className="text-xs font-bold text-[#a39da4] uppercase tracking-wider">
+                <p className="text-xs font-bold text-[#d8c8c0] uppercase tracking-wider">
                   Showcase Proyek ({projects.length} Karya)
                 </p>
 
@@ -236,28 +236,28 @@ export default function PortfolioPage() {
                   {projects.map((proj) => (
                     <div
                       key={proj.id}
-                      className="rounded-xl border border-[#2b2a52] bg-[#14142e] p-5 transition-all hover:border-purple-500/50"
+                      className="rounded-xl border border-[#d8c8c0]/40 bg-[#202048]/90 p-5 transition-all hover:border-[#c8a060]"
                     >
                       <div className="flex justify-between items-start">
                         <div>
-                          <span className="text-[10px] font-semibold text-purple-400 uppercase">{proj.category}</span>
-                          <h3 className="font-display text-base font-bold text-white mt-0.5">{proj.title}</h3>
+                          <span className="text-[10px] font-semibold text-[#c8a060] uppercase">{proj.category}</span>
+                          <h3 className="font-display text-base font-bold text-[#f8e8d8] mt-0.5">{proj.title}</h3>
                         </div>
                         <a
                           href={proj.link}
                           target="_blank"
                           rel="noreferrer"
-                          className="text-xs text-purple-400 hover:underline font-semibold"
+                          className="text-xs text-[#c8a060] hover:underline font-semibold"
                         >
                           Lihat Live →
                         </a>
                       </div>
 
-                      <p className="mt-2 text-xs text-[#c4bab0] leading-relaxed">{proj.description}</p>
+                      <p className="mt-2 text-xs text-[#d8c8c0] leading-relaxed">{proj.description}</p>
 
                       <div className="mt-4 flex flex-wrap gap-1.5">
                         {proj.tags.map((t, idx) => (
-                          <span key={idx} className="rounded-md bg-[#2b2a52] px-2 py-0.5 text-[10px] text-[#c4bab0]">
+                          <span key={idx} className="rounded-md bg-[#202048]/70 px-2 py-0.5 text-[10px] text-[#d8c8c0]">
                             {t}
                           </span>
                         ))}

@@ -3,7 +3,7 @@ import Reveal from "@/components/ui/Reveal";
 
 export default function TrustedBy() {
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section className="bg-[#f8e8d8] py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <Reveal className="text-center">
           <h2 className="font-display text-3xl font-bold tracking-tight text-[#202048] md:text-4xl">
@@ -11,7 +11,7 @@ export default function TrustedBy() {
             <br />
             <span className="text-[var(--primary)]">yang serius cari kerja</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-base text-[#5a545b]">
+          <p className="mx-auto mt-4 max-w-lg text-base text-[#6f6870]">
             Pengguna Karierku telah melamar ke berbagai perusahaan di Indonesia.
           </p>
         </Reveal>

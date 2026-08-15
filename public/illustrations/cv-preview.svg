@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" fill="none">
+  <!-- Background -->
+  <rect width="480" height="240" rx="16" fill="#f8e8d8"/>
+  
+  <!-- Document 1 (left) -->
+  <g transform="translate(40, 20)">
+    <rect x="0" y="0" width="140" height="200" rx="8" fill="white" stroke="#d8c8c0" stroke-width="2"/>
+    <rect x="15" y="15" width="60" height="8" rx="2" fill="#202048"/>
+    <rect x="15" y="30" width="40" height="4" rx="1" fill="#d8c8c0"/>
+    <rect x="15" y="45" width="110" height="3" rx="1" fill="#e8e0d8"/>
+    <rect x="15" y="55" width="100" height="3" rx="1" fill="#e8e0d8"/>
+    <rect x="15" y="65" width="105" height="3" rx="1" fill="#e8e0d8"/>
+    <rect x="15" y="80" width="110" height="1" fill="#d8c8c0"/>
+    <rect x="15" y="90" width="80" height="3" rx="1" fill="#e8e0d8"/>
+    <rect x="15" y="100" width="90" height="3" rx="1" fill="#e8e0d8"/>
+    <rect x="15" y="110" width="70" height="3" rx="1" fill="#e8e0d8"/>
+    <rect x="15" y="125" width="110" height="1" fill="#d8c8c0"/>
+    <rect x="15" y="135" width="60" height="3" rx="1" fill="#c8a060" opacity="0.3"/>
+    <rect x="15" y="145" width="85" height="3" rx="1" fill="#e8e0d8"/>
+    <rect x="15" y="155" width="75" height="3" rx="1" fill="#e8e0d8"/>
+    <!-- Checkmark -->
+    <circle cx="120" cy="180" r="12" fill="#c8a060"/>
+    <path d="M114 180 L118 184 L126 176" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Arrow -->
+  <g transform="translate(200, 95)">
+    <circle cx="40" cy="25" r="30" fill="white" stroke="#d8c8c0" stroke-width="2"/>
+    <path d="M25 25 L55 25 M47 17 L55 25 L47 33" stroke="#202048" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Document 2 (right - LinkedIn style) -->
+  <g transform="translate(300, 20)">
+    <rect x="0" y="0" width="140" height="200" rx="8" fill="white" stroke="#d8c8c0" stroke-width="2"/>
+    <rect x="0" y="0" width="140" height="40" rx="8" fill="#202048"/>
+    <rect x="0" y="32" width="140" height="8" fill="#202048"/>
+    <circle cx="30" cy="50" r="15" fill="#f8e8d8" stroke="white" stroke-width="3"/>
+    <rect x="55" y="42" width="60" height="6" rx="2" fill="#202048"/>
+    <rect x="55" y="54" width="40" height="4" rx="1" fill="#d8c8c0"/>
+    <rect x="15" y="75" width="110" height="3" rx="1" fill="#e8e0d8"/>
+    <rect x="15" y="85" width="100" height="3" rx="1" fill="#e8e0d8"/>
+    <rect x="15" y="100" width="110" height="1" fill="#d8c8c0"/>
+    <rect x="15" y="110" width="80" height="3" rx="1" fill="#e8e0d8"/>
+    <rect x="15" y="120" width="95" height="3" rx="1" fill="#e8e0d8"/>
+    <rect x="15" y="130" width="70" height="3" rx="1" fill="#e8e0d8"/>
+    <rect x="15" y="145" width="110" height="1" fill="#d8c8c0"/>
+    <rect x="15" y="155" width="60" height="3" rx="1" fill="#c8a060" opacity="0.3"/>
+    <rect x="15" y="165" width="85" height="3" rx="1" fill="#e8e0d8"/>
+    <rect x="15" y="175" width="75" height="3" rx="1" fill="#e8e0d8"/>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="30" cy="30" r="6" fill="#c8a060" opacity="0.4"/>
+  <circle cx="450" cy="210" r="8" fill="#202048" opacity="0.2"/>
+  <circle cx="420" cy="25" r="4" fill="#d8c8c0" opacity="0.6"/>
+</svg>

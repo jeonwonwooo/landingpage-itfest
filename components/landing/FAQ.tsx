@@ -1,13 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import SectionHeader from "@/components/ui/SectionHeader";
 import Reveal from "@/components/ui/Reveal";
 
 const faqs = [
   {
     q: "Apa itu Karierku?",
-    a: "Karierku bantu kamu bikin CV yang lolos ATS, perkuat profil LinkedIn, dan bikin portofolio — semua pakai AI. Gratis untuk mulai.",
+    a: "Karierku membantu kamu menyusun CV ramah ATS, merapikan profil LinkedIn, dan menyiapkan portofolio. Kamu bisa mulai dari contoh yang sudah tersedia.",
   },
   {
     q: "Bagaimana AI membantu mengoreksi CV saya?",
@@ -23,7 +22,7 @@ const faqs = [
   },
   {
     q: "Bagaimana cara mengoptimasi LinkedIn?",
-    a: "Masukkan URL profil LinkedIn, lalu sistem memberi skor (1–100) dan rekomendasi spesifik — kata kunci headline, optimasi About, hingga template summary sesuai industri.",
+    a: "Masukkan URL profil LinkedIn, lalu sistem menampilkan contoh penilaian profil, kata kunci untuk headline, arahan untuk About, dan template ringkasan sesuai industri.",
   },
   {
     q: "Bisakah saya membuat portofolio sendiri?",
@@ -35,17 +34,18 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="border-t border-[#d8c8c0]/80 bg-[#fbf2e8]/60 py-20 md:py-28">
+    <section id="faq" className="border-t border-[#d8c8c0]/80 bg-[#f8e8d8]/60 py-20 md:py-28">
       <div className="mx-auto max-w-2xl px-4 lg:px-8">
-        <Reveal>
-          <SectionHeader
-            eyebrow="FAQ"
-            title="Pertanyaan yang sering diajukan"
-            description="Jawaban singkat seputar skor ATS, analisis CV, dan cara kerja Karierku."
-          />
+        <Reveal className="text-center">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-[#202048] md:text-4xl">
+            Pertanyaan yang sering diajukan
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-[#6f6870]">
+            Jawaban singkat seputar skor ATS, analisis CV, dan cara kerja Karierku.
+          </p>
         </Reveal>
 
-        <div className="mt-12 divide-y divide-[#d8c8c0] rounded-2xl border border-[#d8c8c0] bg-white">
+        <div className="mt-12 divide-y divide-[#d8c8c0] rounded-2xl border border-[#d8c8c0] bg-white shadow-sm">
           {faqs.map((item, i) => {
             const isOpen = openIndex === i;
             return (
@@ -54,14 +54,14 @@ export default function FAQ() {
                   <button
                     type="button"
                     onClick={() => setOpenIndex(isOpen ? null : i)}
-                    className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
+                    className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-[#f8e8d8]/50"
                     aria-expanded={isOpen}
                   >
                     <span className="text-sm font-semibold text-[#202048] md:text-base">
                       {item.q}
                     </span>
                     <svg
-                      className={`shrink-0 text-[#a39da4] transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                      className={`shrink-0 text-[#6f6870] transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
                       width="18"
                       height="18"
                       viewBox="0 0 24 24"
@@ -75,7 +75,7 @@ export default function FAQ() {
                     </svg>
                   </button>
                   {isOpen && (
-                    <div className="px-6 pb-5 text-sm leading-relaxed text-[#5a545b]">
+                    <div className="px-6 pb-5 text-sm leading-relaxed text-[#6f6870]">
                       {item.a}
                     </div>
                   )}

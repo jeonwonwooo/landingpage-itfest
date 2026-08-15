@@ -8,10 +8,10 @@ type BadgeProps = {
 
 export default function Badge({ className, variant = "teal", children }: BadgeProps) {
   const variantStyles = {
-    teal: "border-[#c6cbe8]/80 bg-[#eef0f8]/80 text-[var(--primary-dark)]",
-    emerald: "border-[#eed8ac]/80 bg-[#fbf3e4]/80 text-[#8c6f3f]",
-    blue: "border-[#c6cbe8]/80 bg-[#eef0f8]/80 text-[#101026]",
-    slate: "border-[#d8c8c0] bg-[#f8e8d8] text-[#38365a]",
+    teal: "border-[#d8c8c0]/80 bg-[#202048]/5 text-[#202048]",
+    emerald: "border-[#c8a060]/80 bg-[#c8a060]/12 text-[#202048]",
+    blue: "border-[#d8c8c0]/80 bg-[#202048]/5 text-[#202048]",
+    slate: "border-[#d8c8c0] bg-[#f8e8d8] text-[#6f6870]",
   };
 
   return (

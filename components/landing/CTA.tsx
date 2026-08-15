@@ -1,24 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-
-const shortcuts = [
-  { key: "Skor ATS", href: "/cv" },
-  { key: "Rewrite", href: "/cv" },
-  { key: "Template", href: "/cv" },
-  { key: "LinkedIn", href: "/linkedin" },
-];
 
 export default function CTA() {
   return (
-    <section className="py-20 md:py-28">
+    <section className="bg-[#f8e8d8]/60 py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <Reveal>
-          <div className="overflow-hidden rounded-2xl border border-[#d8c8c0] bg-white">
+          <div className="overflow-hidden rounded-2xl border border-[#d8c8c0] bg-white shadow-sm">
             <div className="grid items-center gap-8 p-8 md:grid-cols-2 md:p-12">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#c8a060]">
                   Masih bingung?
                 </p>
                 <h2 className="font-display mt-3 text-3xl font-bold tracking-tight text-[#202048] md:text-4xl">
@@ -26,19 +18,20 @@ export default function CTA() {
                   <br />
                   dengan beberapa klik
                 </h2>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {shortcuts.map((s) => (
-                    <Link
-                      key={s.key}
-                      href={s.href}
-                      className="rounded-full border border-[#d8c8c0] bg-[#fbf2e8] px-3.5 py-1.5 text-xs font-medium text-[#5a545b] transition-colors hover:border-[#c4bab0] hover:bg-white"
-                    >
-                      {s.key}
-                    </Link>
-                  ))}
-                </div>
+                <p className="mt-4 text-sm leading-relaxed text-[#6f6870]">
+                  Mulai dari data diri, optimasi headline LinkedIn, hingga portofolio yang siap dibagikan. Semua dalam satu platform.
+                </p>
                 <div className="mt-8 flex flex-wrap items-center gap-4">
-                  <Button href="/cv">Buat CV Sekarang</Button>
+                  <Link
+                    href="/login"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#202048] px-6 py-3 text-sm font-bold text-[#f8e8d8] shadow-md transition-all hover:bg-[#c8a060] hover:shadow-lg active:scale-95"
+                  >
+                    Buat CV Sekarang
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </Link>
                   <a
                     href="mailto:hello@karierku.id"
                     className="text-sm font-medium text-[#6f6870] hover:text-[#202048]"
@@ -50,10 +43,10 @@ export default function CTA() {
 
               <div className="flex justify-center">
                 <Image
-                  src="/illustrations/keyboard.svg"
-                  alt="Keyboard shortcut illustration"
+                  src="/illustrations/cv-preview.svg"
+                  alt="CV Builder Preview"
                   width={480}
-                  height={200}
+                  height={240}
                   className="w-full max-w-md"
                 />
               </div>

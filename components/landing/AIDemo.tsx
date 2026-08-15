@@ -11,7 +11,7 @@ const chatMessages = [
   },
   {
     role: "ai" as const,
-    text: "Tentu! Saya analisa dulu — bagian pengalaman perlu metrik angka. Coba: \"Meningkatkan engagement 32% dalam 3 bulan lewat optimasi UX.\"",
+    text: "Tentu. Bagian pengalamanmu akan lebih kuat kalau ada metrik angka. Contohnya: \"Meningkatkan engagement 32% dalam 3 bulan lewat optimasi UX.\"",
   },
 ];
 
@@ -37,20 +37,19 @@ export default function AIDemo() {
   }, [visibleCount]);
 
   return (
-    <section id="demo" className="border-y border-[#d8c8c0]/80 bg-[#fbf2e8]/60 py-20 md:py-28">
+    <section id="demo" className="border-y border-[#d8c8c0]/80 bg-[#f8e8d8]/60 py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
-              AI Chat
+              Demo Interaktif
             </p>
             <h2 className="font-display mt-3 text-3xl font-bold tracking-tight text-[#202048] md:text-4xl">
-              Asisten karier personal
+              Contoh pendampingan penulisan CV
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-[#5a545b]">
-              Chat dengan AI yang membantu menulis, menulis ulang, dan
-              mengoptimalkan CV section-by-section — berdasarkan ATS, job
-              description, dan ekspektasi recruiter.
+            <p className="mt-4 text-base leading-relaxed text-[#6f6870]">
+              Lihat contoh percakapan yang menunjukkan cara Karierku memberi
+              saran penulisan ulang untuk CV berdasarkan konteks lamaran.
             </p>
             <div className="mt-8">
               <Button href="/cv">Buat CV Sekarang</Button>
@@ -59,27 +58,27 @@ export default function AIDemo() {
 
           <Reveal delay={1}>
             <div className="relative">
-              <div className="absolute -right-2 -top-2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-[#f6e7cb]">
+              <div className="absolute -right-2 -top-2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-[#c8a060]/12">
                 <svg
                   width="16"
                   height="16"
                   viewBox="0 0 24 24"
-                  fill="#f59e0b"
+                  fill="#c8a060"
                 >
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
               </div>
 
-              <div className="overflow-hidden rounded-2xl border border-[#d8c8c0] bg-white shadow-[0_8px_40px_-12px_rgba(15,23,42,0.12)]">
+              <div className="overflow-hidden rounded-2xl border border-[#d8c8c0] bg-[#202048]/5 shadow-[0_8px_40px_-12px_rgba(32,32,72,0.12)]">
                 <div className="flex items-center gap-3 border-b border-[#f8e8d8] px-5 py-3.5">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--primary)] text-xs font-bold text-white">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--primary)] text-xs font-bold text-[#f8e8d8]">
                     AI
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-[#202048]">
-                      Karierku Assistant
+                      Karierku Demo
                     </p>
-                    <p className="text-xs text-[#a39da4]">Online</p>
+                    <p className="text-xs text-[#6f6870]">Contoh percakapan</p>
                   </div>
                 </div>
 
@@ -92,8 +91,8 @@ export default function AIDemo() {
                       <div
                         className={`max-w-[88%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
                           msg.role === "user"
-                            ? "rounded-br-md bg-[var(--primary)] text-white"
-                            : "rounded-bl-md bg-[#f8e8d8] text-[#38365a]"
+                            ? "rounded-br-md bg-[var(--primary)] text-[#f8e8d8]"
+                            : "rounded-bl-md bg-[#f8e8d8] text-[#6f6870]"
                         }`}
                       >
                         {msg.text}
@@ -103,10 +102,10 @@ export default function AIDemo() {
 
                   {typing && (
                     <div className="flex justify-start">
-                      <div className="flex items-center gap-1.5 rounded-2xl rounded-bl-md bg-[#f8e8d8] px-4 py-3 text-sm text-[#a39da4]">
-                        <span className="typing-dot h-1.5 w-1.5 rounded-full bg-[#a39da4]" />
-                        <span className="typing-dot h-1.5 w-1.5 rounded-full bg-[#a39da4]" />
-                        <span className="typing-dot h-1.5 w-1.5 rounded-full bg-[#a39da4]" />
+                      <div className="flex items-center gap-1.5 rounded-2xl rounded-bl-md bg-[#f8e8d8] px-4 py-3 text-sm text-[#6f6870]">
+                        <span className="typing-dot h-1.5 w-1.5 rounded-full bg-[#6f6870]" />
+                        <span className="typing-dot h-1.5 w-1.5 rounded-full bg-[#6f6870]" />
+                        <span className="typing-dot h-1.5 w-1.5 rounded-full bg-[#6f6870]" />
                       </div>
                     </div>
                   )}

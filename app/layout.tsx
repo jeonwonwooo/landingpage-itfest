@@ -13,9 +13,14 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Karierku — CV ATS-Friendly, LinkedIn & Portofolio dengan AI",
+  title: "Karierku | CV ATS-Friendly, LinkedIn, dan Portofolio",
   description:
-    "Platform all-in-one untuk mahasiswa & fresh graduate. Buat CV ATS-friendly, optimalkan LinkedIn, dan bangun portofolio profesional dengan bantuan AI.",
+    "Platform untuk mahasiswa dan fresh graduate yang ingin menyusun CV ATS-friendly, merapikan LinkedIn, dan menampilkan portofolio dengan lebih rapi.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

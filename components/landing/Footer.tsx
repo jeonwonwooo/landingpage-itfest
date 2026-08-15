@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const featureLinks = [
-  { label: "Asisten AI", href: "#demo" },
-  { label: "Skor CV", href: "/cv" },
-  { label: "LinkedIn", href: "/linkedin" },
-  { label: "Portofolio", href: "/portfolio" },
+  { label: "About", href: "/about" },
+  { label: "Fitur", href: "/fitur" },
+  { label: "Harga", href: "/harga" },
+  { label: "Blog", href: "/blog" },
 ];
 
 const infoLinks = [
@@ -16,13 +16,13 @@ const infoLinks = [
 export default function Footer() {
   return (
     <footer>
-      <div className="border-t border-[#d8c8c0] bg-[#fbf2e8]/80 py-16 md:py-20">
+      <div className="border-t border-[#d8c8c0] py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4 text-center lg:px-8">
           <Image
-            src="/illustrations/footer-cloud.svg"
+            src="/illustrations/footer-cta.svg"
             alt=""
-            width={320}
-            height={120}
+            width={400}
+            height={200}
             className="mx-auto"
             aria-hidden
           />
@@ -37,15 +37,19 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-[#d8c8c0] bg-white py-12 md:py-16">
+      <div className="border-t border-[#d8c8c0] bg-[#f8e8d8]/30 py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-4 lg:px-8">
           <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
             <div>
               <div className="flex items-center gap-2.5">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--primary)] font-display text-sm font-bold text-white">
-                  K
-                </span>
-                <span className="font-display text-lg font-bold text-[#202048]">
+                <Image
+                  src="/logo.png"
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="transition-transform duration-300 hover:scale-105"
+                />
+                <span className="font-display text-xl font-bold text-[#202048]">
                   Karierku
                 </span>
               </div>
@@ -53,7 +57,7 @@ export default function Footer() {
                 Platform CV, LinkedIn &amp; portofolio
                 untuk mahasiswa &amp; fresh graduate.
               </p>
-              <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-[#a39da4]">
+              <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-[#6f6870]">
                 Ikuti kami
               </p>
               <div className="mt-2 flex gap-3">
@@ -105,16 +109,18 @@ export default function Footer() {
               </ul>
               <div className="mt-6">
                 <p className="text-sm font-semibold text-[#202048]">Kontak</p>
-                <p className="mt-1 text-sm text-[#6f6870]">
+                <a href="mailto:hello@karierku.id" className="mt-1 block text-sm text-[#6f6870] hover:text-[#202048]">
                   hello@karierku.id
-                </p>
-                <p className="text-sm text-[#6f6870]">+62 812-3456-7890</p>
+                </a>
+                <a href="tel:+6281234567890" className="block text-sm text-[#6f6870] hover:text-[#202048]">
+                  +62 812-3456-7890
+                </a>
               </div>
             </div>
           </div>
 
-          <div className="mt-10 border-t border-[#d8c8c0] pt-8 text-center text-sm text-[#a39da4]">
-            © 2026 Karierku. All rights reserved.
+          <div className="mt-10 border-t border-[#d8c8c0] pt-8 text-center text-sm text-[#6f6870]">
+            &copy; 2026 Karierku. All rights reserved.
           </div>
         </div>
       </div>

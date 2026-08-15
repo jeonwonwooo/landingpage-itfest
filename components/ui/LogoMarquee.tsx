@@ -24,7 +24,7 @@ export default function LogoMarquee({ label }: { label?: string }) {
           {items.map((name, i) => (
             <span
               key={`${name}-${i}`}
-              className="shrink-0 text-sm font-semibold tracking-wide text-[#a39da4]"
+              className="shrink-0 text-sm font-semibold tracking-wide text-[#6f6870]"
             >
               {name}
             </span>
