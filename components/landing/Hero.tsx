@@ -1,5 +1,4 @@
 import Link from "next/link";
-import LogoMarquee from "@/components/ui/LogoMarquee";
 import Reveal from "@/components/ui/Reveal";
 
 export default function Hero() {
@@ -51,10 +50,6 @@ export default function Hero() {
               Lihat Fitur
             </Link>
           </div>
-        </Reveal>
-
-        <Reveal delay={1} className="mt-14">
-          <LogoMarquee />
         </Reveal>
       </div>
     </section>

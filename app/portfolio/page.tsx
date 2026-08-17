@@ -16,6 +16,7 @@ interface ProjectItem {
 export default function PortfolioPage() {
   const [username, setUsername] = useState("budi-pratama");
   const [template, setTemplate] = useState<"dev" | "design" | "writer" | "umkm">("dev");
+  const [isCopied, setIsCopied] = useState(false); // State baru buat efek tombol salin
 
   const [projects, setProjects] = useState<ProjectItem[]>([
     {
@@ -63,6 +64,17 @@ export default function PortfolioPage() {
     setNewTags("");
   };
 
+  // Fungsi baru buat nyalin text beneran ke clipboard
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(`karierku.id/p/${username}`);
+    setIsCopied(true);
+    
+    // Balikin teks tombol ke semula setelah 2 detik
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 2000);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -87,11 +99,15 @@ export default function PortfolioPage() {
               <span className="font-display font-bold text-sm text-[#202048]">
                 karierku.id/p/<span className="text-[#c8a060]">{username}</span>
               </span>
+              
+              {/* Tombol Salin Link yang udah di-upgrade */}
               <button
-                onClick={() => alert(`Tautan karierku.id/p/${username} disalin ke clipboard!`)}
-                className="rounded-lg bg-[#202048] px-3 py-1 text-xs font-bold text-[#f8e8d8] hover:bg-[#c8a060]"
+                onClick={handleCopyLink}
+                className={`rounded-lg px-3 py-1 text-xs font-bold text-white transition-all duration-300 ${
+                  isCopied ? "bg-green-600 hover:bg-green-700" : "bg-[#202048] hover:bg-[#c8a060]"
+                }`}
               >
-                Salin Link
+                {isCopied ? "Tersalin! ✓" : "Salin Link"}
               </button>
             </div>
           </div>

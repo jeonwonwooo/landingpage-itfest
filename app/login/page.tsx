@@ -4,8 +4,10 @@ import Navbar from "@/components/landing/Navbar";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
+  const router = useRouter();
   const [mode, setMode] = useState<"login" | "register">("login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -39,7 +41,8 @@ export default function LoginPage() {
     e.preventDefault();
     const isValid = mode === "login" ? validateLogin() : validateRegister();
     if (isValid) {
-      alert(`${mode === "login" ? "Login" : "Registrasi"} berhasil! Mengalihkan ke dashboard...`);
+      localStorage.setItem("isLoggedIn", "true");
+      router.push("/dashboard");
     }
   };
 
@@ -121,14 +124,8 @@ export default function LoginPage() {
                       errors.fullName ? "border-[#e53e3e]" : "border-[#d8c8c0]"
                     }`}
                     required
-                    autoComplete="name"
-                    aria-invalid={errors.fullName ? "true" : "false"}
                   />
-                  {errors.fullName && (
-                    <p className="mt-1 text-xs text-[#e53e3e]" role="alert">
-                      {errors.fullName}
-                    </p>
-                  )}
+                  {errors.fullName && <p className="mt-1 text-xs text-[#e53e3e]">{errors.fullName}</p>}
                 </div>
               )}
 
@@ -146,14 +143,8 @@ export default function LoginPage() {
                     errors.email ? "border-[#e53e3e]" : "border-[#d8c8c0]"
                   }`}
                   required
-                  autoComplete={mode === "login" ? "email" : "email"}
-                  aria-invalid={errors.email ? "true" : "false"}
                 />
-                {errors.email && (
-                  <p className="mt-1 text-xs text-[#e53e3e]" role="alert">
-                    {errors.email}
-                  </p>
-                )}
+                {errors.email && <p className="mt-1 text-xs text-[#e53e3e]">{errors.email}</p>}
               </div>
 
               <div>
@@ -170,14 +161,8 @@ export default function LoginPage() {
                     errors.password ? "border-[#e53e3e]" : "border-[#d8c8c0]"
                   }`}
                   required
-                  autoComplete={mode === "login" ? "current-password" : "new-password"}
-                  aria-invalid={errors.password ? "true" : "false"}
                 />
-                {errors.password && (
-                  <p className="mt-1 text-xs text-[#e53e3e]" role="alert">
-                    {errors.password}
-                  </p>
-                )}
+                {errors.password && <p className="mt-1 text-xs text-[#e53e3e]">{errors.password}</p>}
               </div>
 
               {mode === "register" && (
@@ -195,20 +180,14 @@ export default function LoginPage() {
                       errors.confirmPassword ? "border-[#e53e3e]" : "border-[#d8c8c0]"
                     }`}
                     required
-                    autoComplete="new-password"
-                    aria-invalid={errors.confirmPassword ? "true" : "false"}
                   />
-                  {errors.confirmPassword && (
-                    <p className="mt-1 text-xs text-[#e53e3e]" role="alert">
-                      {errors.confirmPassword}
-                    </p>
-                  )}
+                  {errors.confirmPassword && <p className="mt-1 text-xs text-[#e53e3e]">{errors.confirmPassword}</p>}
                 </div>
               )}
 
               <button
                 type="submit"
-                className="w-full rounded-xl bg-[#202048] py-3 text-sm font-bold text-[#f8e8d8] shadow-md transition-all hover:bg-[#c8a060] hover:shadow-lg active:scale-[0.98]"
+                className="w-full rounded-xl bg-[#202048] py-3 text-sm font-bold text-[#f8e8d8] shadow-md transition-all hover:bg-[#c8a060] active:scale-[0.98]"
               >
                 {mode === "login" ? "Masuk" : "Buat Akun"}
               </button>
@@ -218,59 +197,20 @@ export default function LoginPage() {
               {mode === "login" ? (
                 <>
                   Belum punya akun?{" "}
-                  <button
-                    type="button"
-                    onClick={() => switchMode("register")}
-                    className="font-semibold text-[#202048] hover:text-[#c8a060]"
-                  >
+                  <button onClick={() => switchMode("register")} className="font-semibold text-[#202048] hover:text-[#c8a060]">
                     Daftar gratis
                   </button>
                 </>
               ) : (
                 <>
                   Sudah punya akun?{" "}
-                  <button
-                    type="button"
-                    onClick={() => switchMode("login")}
-                    className="font-semibold text-[#202048] hover:text-[#c8a060]"
-                  >
+                  <button onClick={() => switchMode("login")} className="font-semibold text-[#202048] hover:text-[#c8a060]">
                     Masuk
                   </button>
                 </>
               )}
             </p>
-
-            <div className="mt-6 pt-6 border-t border-[#f8e8d8]">
-              <button
-                type="button"
-                className="w-full flex items-center justify-center gap-2 rounded-xl border border-[#d8c8c0] bg-white px-4 py-2.5 text-sm font-semibold text-[#202048] shadow-sm transition-all hover:border-[#c8a060] hover:shadow-md"
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.539,3.921,1.411l2.814-2.813C17.543,1.467,14.968,0,12.062,0C7.152,0,3.138,4.014,3.138,8.925c0,2.294,0.909,4.356,2.318,5.814" />
-                  <path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.539,3.921,1.411l2.814-2.813C17.543,1.467,14.968,0,12.062,0C7.152,0,3.138,4.014,3.138,8.925c0,2.294,0.909,4.356,2.318,5.814" />
-                </svg>
-                Lanjutkan dengan Google
-              </button>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-[#f8e8d8]">
-              <p className="text-center text-xs text-[#6f6870]">
-                Dengan melanjutkan, Anda menyetujui{" "}
-                <a href="#" className="text-[#c8a060] hover:text-[#202048]">
-                  Syarat & Ketentuan
-                </a>{" "}
-                dan{" "}
-                <a href="#" className="text-[#c8a060] hover:text-[#202048]">
-                  Kebijakan Privasi
-                </a>
-                .
-              </p>
-            </div>
           </div>
-
-          <p className="mt-6 text-center text-xs text-[#d8c8c0]">
-            © 2026 Karierku. Semua hak dilindungi.
-          </p>
         </div>
       </main>
     </>

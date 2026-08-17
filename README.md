@@ -1,56 +1,29 @@
-# Landing Page ITFest
+# Karierku 🚀
 
-Template kompetisi landing page berbasis Next.js 16 + Tailwind CSS 4.
+Tingkatkan Karirmu dengan CV, LinkedIn, dan Portofolio yang Dilirik HRD. 
+Platform *all-in-one* yang didesain khusus untuk membantu mahasiswa dan *fresh graduate* memenangkan persaingan di dunia kerja.
 
-## Menjalankan di Lokal
+> **Project Prototype - ITFest** 
 
-```bash
-npm install
-npm run dev
-```
+## 🎯 Latar Belakang Masalah
+Banyak *fresh graduate* kesulitan lolos *screening* awal karena format CV yang tidak ramah ATS (Applicant Tracking System), profil LinkedIn yang kurang teroptimasi, dan tidak memiliki wadah portofolio yang profesional. **Karierku** hadir sebagai solusi terintegrasi untuk menyelesaikan ketiga masalah tersebut dalam satu *workspace*.
 
-Buka http://localhost:3000.
+## ✨ Fitur Utama (MVP)
+1. **CV Builder & Reviewer**: Pembuat CV berstandar ATS dengan antarmuka yang simpel.
+2. **LinkedIn Branding Optimizer**: Generator *copywriting* dan *checklist* audit untuk profil LinkedIn.
+3. **Portfolio Builder**: Pembuat halaman *showcase* karya dengan *custom sub-domain* (contoh: `karierku.id/p/username`) dan fitur *copy link* cepat.
+4. **Lead Generation Pricing**: Sistem validasi pasar melalui *form pop-up* pada halaman harga untuk memvalidasi *demand* pengguna sebelum pengembangan *payment gateway* (Strategi MVP).
 
-## Struktur Penting
+## 💻 Tech Stack
+- **Framework:** Next.js
+- **Styling:** Tailwind CSS
+- **Language:** TypeScript
+- **State Management:** React Hooks & LocalStorage (Simulasi Autentikasi)
 
-- `app/page.tsx`: konten landing page utama
-- `app/globals.css`: styling global dan animasi
-- `app/layout.tsx`: metadata dan konfigurasi font
+## 🛠️ Cara Menjalankan Project (Local Development)
 
-## Build Produksi
+Ikuti langkah-langkah berikut untuk menjalankan project ini di komputer lokal:
 
-```bash
-npm run build
-npm run start
-```
-
-## Deploy ke Vercel
-
-### Opsi 1 (Paling mudah, via GitHub)
-
-1. Push project ini ke repository GitHub.
-2. Buka https://vercel.com/new dan login.
-3. Pilih repository `landingpage-itfest`.
-4. Klik Deploy (setting default Next.js sudah otomatis benar).
-5. Setelah selesai, dapat URL produksi.
-
-### Opsi 2 (Via CLI)
-
-```bash
-npm i -g vercel
-vercel
-```
-
-Ikuti prompt login dan konfirmasi project.
-
-Untuk update berikutnya:
-
-```bash
-vercel --prod
-```
-
-## Catatan Lomba
-
-- Ganti konten hero, timeline, dan CTA sesuai brief resmi lomba.
-- Optimasi aset gambar (WebP/AVIF) agar skor performa tetap tinggi.
-- Jalankan Lighthouse sebelum submit URL final.
+1. Clone repository ini:
+   ```bash
+   git clone [https://github.com/username-kamu/itfest-landingpage.git](https://github.com/username-kamu/itfest-landingpage.git)
